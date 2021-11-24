@@ -1,0 +1,38 @@
+
+package howManyDigits;
+import java.util.Scanner;
+
+
+public class Main {
+
+  
+    public static void main(String[] args) {
+       String stop ="con" ;
+       int i = 2;
+       Scanner scanner = new Scanner (System.in);
+       do{
+           
+           System.out.println("Enter the number");
+           try {
+           
+           String number = scanner.next();
+           Integer.valueOf(number);
+           System.out.println("The number of digits = " + number.length() );
+           
+           }
+           catch (Exception e) {
+            System.err.println("enter number only");
+           }
+           System.out.println( "tab \"stop\" to stop tab another else to continue");
+           
+           stop = scanner.next();
+       if ( stop.equals("stop"))
+       {
+          i =1; 
+       }
+      }
+       while ( i != 1);
+       
+    }
+    
+}
